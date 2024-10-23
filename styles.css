@@ -1,0 +1,815 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    min-height: 100vh;
+    background: rgb(105,100,100);
+    background: linear-gradient(0deg, rgba(105,100,100,1) 19%, rgba(0,0,0,1) 100%);
+}
+
+/*Header*/
+
+header {
+    width: 100vw;
+    height: 70px;
+}
+
+.navbar {
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar a {
+    color: #ffffff;
+}
+
+.navbar a img {
+    height: 50px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 30px;
+}
+
+.navbar .nav-links ul li.active a {
+    color: #ff5757;
+    font-weight: bold;
+}
+
+.navbar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 23.8px;
+    right: 30px;
+    width: 37px;
+}
+
+/* FOOTER */
+footer {
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+#rs ul li a:visited {
+    color: #ff5757; /* Changez la couleur pour qu'elle soit la même que les liens non visités */
+    text-decoration: none; /* Retire le soulignement si nécessaire */
+}
+
+#rs ul{
+    display: flex;
+    justify-content: center;
+}
+
+#rs li{
+    height: 80px;
+    margin: 20px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #dde1e7;
+    box-shadow:  5px 5px 8px #acb0b4,
+             -5px -5px 8px #ffffff;
+    cursor: pointer;
+}
+
+#rs li:hover{
+    border-radius: 50%;
+    background: #dde1e7;
+    box-shadow: inset 5px 5px 8px #acb0b4,
+            inset -5px -5px 8px #ffffff;
+}
+
+#rs i{
+    font-size: 2.2em;
+}
+
+#droit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#droit p{
+    color: white;
+}
+
+/* Page d'accueil */
+
+/*Contenu de la page d'accueil*/
+
+section#accueil {
+    padding: 0px 15px;
+}
+
+section#accueil .container {
+    margin: 0 auto;
+    max-width: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: white; Voir la taille du conteneur*/
+    padding: 50px 0;
+    border-radius: 15px;
+    box-shadow: 0px 10px 50px -10px rgb(214, 214, 214);
+}
+
+/*Texte escalier*/
+
+
+/*Photos*/
+
+section#accueil .container .photos {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+section#accueil .container .photos img {
+    border: 1px solid #333;
+    border-radius: 50px;
+    color: #2A2A2A;
+    height: 338px;
+    transition: 0.3s;
+}
+
+section#accueil .container .photos img:hover {
+    height: 400px;
+    cursor: zoom-in;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap");
+
+:root {
+  --shiny-cta-bg: #000000;
+  --shiny-cta-bg-subtle: #1a1818;
+  --shiny-cta-fg: #ffffff;
+  --shiny-cta-highlight: blue;
+  --shiny-cta-highlight-subtle: #8484ff;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --gradient-angle-offset {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --gradient-percent {
+  syntax: "<percentage>";
+  initial-value: 5%;
+  inherits: false;
+}
+
+@property --gradient-shine {
+  syntax: "<color>";
+  initial-value: white;
+  inherits: false;
+}
+
+.shiny-cta {
+  --animation: gradient-angle linear infinite;
+  --duration: 3s;
+  --shadow-size: 2px;
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline-offset: 4px;
+  padding: 1.25rem 2.5rem;
+  font-family: inherit;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  border: 1px solid transparent;
+  border-radius: 360px;
+  color: var(--shiny-cta-fg);
+  background: linear-gradient(var(--shiny-cta-bg), var(--shiny-cta-bg))
+      padding-box,
+    conic-gradient(
+        from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+        transparent,
+        var(--shiny-cta-highlight) var(--gradient-percent),
+        var(--gradient-shine) calc(var(--gradient-percent) * 2),
+        var(--shiny-cta-highlight) calc(var(--gradient-percent) * 3),
+        transparent calc(var(--gradient-percent) * 4)
+      )
+      border-box;
+  box-shadow: inset 0 0 0 1px var(--shiny-cta-bg-subtle);
+
+  &::before,
+  &::after,
+  span::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+  }
+
+  &:active {
+    translate: 0 1px;
+  }
+}
+
+/* Dots pattern */
+.shiny-cta::before {
+  --size: calc(100% - var(--shadow-size) * 3);
+  --position: 2px;
+  --space: calc(var(--position) * 2);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(
+      circle at var(--position) var(--position),
+      white calc(var(--position) / 4),
+      transparent 0
+    )
+    padding-box;
+  background-size: var(--space) var(--space);
+  background-repeat: space;
+  mask-image: conic-gradient(
+    from calc(var(--gradient-angle) + 45deg),
+    black,
+    transparent 10% 90%,
+    black
+  );
+  border-radius: inherit;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Inner shimmer */
+.shiny-cta::after {
+  --animation: shimmer linear infinite;
+  width: 100%;
+  aspect-ratio: 1;
+  background: linear-gradient(
+    -50deg,
+    transparent,
+    var(--shiny-cta-highlight),
+    transparent
+  );
+  mask-image: radial-gradient(circle at bottom, transparent 40%, black);
+  opacity: 0.6;
+}
+
+.shiny-cta span {
+  z-index: 1;
+
+  &::before {
+    --size: calc(100% + 1rem);
+    width: var(--size);
+    height: var(--size);
+    box-shadow: inset 0 -1ex 2rem 4px var(--shiny-cta-highlight);
+    opacity: 0;
+  }
+}
+
+/* Animate */
+.shiny-cta {
+  --transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
+  transition: var(--transition);
+  transition-property: --gradient-angle-offset, --gradient-percent,
+    --gradient-shine;
+
+  &,
+  &::before,
+  &::after {
+    animation: var(--animation) var(--duration),
+      var(--animation) calc(var(--duration) / 0.4) reverse paused;
+    animation-composition: add;
+  }
+
+  span::before {
+    transition: opacity var(--transition);
+    animation: calc(var(--duration) * 1.5) breathe linear infinite;
+  }
+}
+
+.shiny-cta:is(:hover, :focus-visible) {
+  --gradient-percent: 20%;
+  --gradient-angle-offset: 95deg;
+  --gradient-shine: var(--shiny-cta-highlight-subtle);
+
+  &,
+  &::before,
+  &::after {
+    animation-play-state: running;
+  }
+
+  span::before {
+    opacity: 1;
+  }
+}
+
+@keyframes gradient-angle {
+  to {
+    --gradient-angle: 360deg;
+  }
+}
+
+@keyframes shimmer {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes breathe {
+  from,
+  to {
+    scale: 1;
+  }
+  50% {
+    scale: 1.2;
+  }
+}
+
+/* Page Projet */
+
+section#project .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 50px -10px rgb(214, 214, 214);
+}
+
+section#project .container .title-project{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+section#project .container .title-project #marque{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#project .container .title-project #marque h1{
+  font-family: sans-serif;
+  font-size: 10em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+section#project .container .title-project h1#kick{
+  color: #ff3131;
+}
+
+section#project .container .title-project h1#Cubby{
+  color: #ff5757;
+}
+
+:root {
+  --color-1: #186cb8;
+  --color-2: #2a9a9f;
+  --color-3: #f1b211;
+  --color-4: #e83611;
+  --color-5: #f9002f;
+}
+
+.wrapper {
+  line-height: 1;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 16px);
+}
+
+.wrapper h1 {
+  font-family: sans-serif;
+  font-size: 15vw;
+  font-weight: 900;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
+  text-transform: uppercase;
+  background: linear-gradient(219deg, 
+    var(--color-1) 19%, 
+    transparent 19.2%, transparent 20%, 
+    var(--color-2) 20%, var(--color-2) 39%,
+    transparent 39.2%, transparent 40%,
+    var(--color-3) 40%, var(--color-3) 59%,
+    transparent 59%, transparent 60%,
+    var(--color-4) 60%, var(--color-4) 79%,
+    transparent 79%, transparent 80%,
+    var(--color-5) 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.container-text {
+  padding: 5px;
+  text-align: center;
+/*   background: 
+    radial-gradient(circle at 1.4% 1.5%,
+      var(--color-1) .7%, transparent .8%),
+    radial-gradient(circle at 5% 3%,
+      var(--color-2) .43%, transparent .63%),
+    radial-gradient(circle at 2.5% 3.5%,
+      var(--color-3) .5%, transparent .7%),
+    radial-gradient(circle at 4.5% 1.2%,
+      var(--color-4) .25%, transparent .45%),
+    
+    radial-gradient(circle at 98% 98.2%,
+      var(--color-1) .7%, transparent .8%),
+    radial-gradient(circle at 96% 95.2%,
+      var(--color-2) .43%, transparent .63%),
+    radial-gradient(circle at 94.5% 97.5%,
+      var(--color-3) .5%, transparent .7%),
+    radial-gradient(circle at 98.5% 95.5%,
+      var(--color-4) .25%, transparent .45%);
+} */
+
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper h1 {
+    font-size: 6.5rem;
+  }
+}
+
+
+
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --dark-color-lighten: #f2f5ff;
+  --btn: #141414;
+  --btn-hover: #3a3a3a;
+  --text: #fbf7f7;
+}
+
+/*===== RESET =====*/
+
+.choix button {
+  font-family: "Montserrat", sans-serif;
+  display: inline-block;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.choix a {
+  text-decoration: none;
+}
+
+.choix img {
+  max-width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.choix a:visited{
+    color :#fbf7f7;
+}
+
+/*===== CARD =====*/
+.choix {
+  height: 100%;
+  width: 850px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.card {
+  position: relative;
+  padding: 1rem;
+  width: 350px;
+  height: 450px;
+  box-shadow: -1px 15px 30px -12px rgb(32, 32, 32);
+  border-radius: 0.9rem;
+  background-color: var(--red-card);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.card-blue {
+  background: var(--blue-card);
+}
+
+.product-image {
+  height: 230px;
+  width: 100%;
+  transform: translate(0, -1.5rem);
+  transition: transform 500ms ease-in-out;
+  filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+  display: flex;
+  justify-content: center;
+}
+.product-info {
+  text-align: center;
+}
+
+.card:hover .product-image {
+  transform: translate(-1.5rem, -5rem) rotate(-10deg);
+}
+
+.product-info h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.product-info p {
+  margin: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.price {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+.buy-btn {
+  background-color: var(--btn);
+  padding: 0.6rem 3.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 300ms ease;
+}
+.buy-btn:hover {
+  background-color: var(--btn-hover);
+}
+.fav {
+  box-sizing: border-box;
+  background: #fff;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid#000;
+  display: grid;
+  place-items: center;
+}
+
+.svg {
+  height: 25px;
+  width: 25px;
+  fill: #fff;
+  transition: all 500ms ease;
+}
+
+.fav:hover .svg {
+  fill: #000;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    height: auto;
+  }
+  .choix {
+    padding: 2rem 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+/* Page Contact*/
+section#contact {
+    padding: 10px 15px;
+}
+
+section#contact .container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 60px 10px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 50px -10px rgb(214, 214, 214);
+}
+
+section#contact .container .title-contact {
+    text-align: center;
+    color: #2A2A2A;
+    margin-bottom: 60px;
+}
+
+section#contact .container .title-contact h6 {
+    font-size: 1.2em;
+}
+
+section#contact .container .title-contact h3 {
+    font-size: 3em;
+    color: #ff5757;
+}
+
+section#contact .container form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px;
+}
+
+section#contact .container form input {
+    width: 45%;
+}
+
+section#contact .container form textarea {
+    width: 100%;
+    resize: none;
+    height: 100px;
+    margin-bottom: 50px;
+}
+
+section#contact .container form input,
+section#contact .container form textarea {
+    margin: 15px 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #e4e4ec;
+    transition: 0.2s;
+}
+
+section#contact .container form input:hover,
+section#contact .container form textarea:hover {
+    border-bottom: 2px solid #ff5757;
+}
+
+section#contact .container form button {
+    width: 192px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff5757;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+    outline: none;
+    margin: 0 auto;
+    transition: 0.2s;
+}
+
+section#contact .container form button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 40px 0px rgb(214, 214, 214);
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        height: 70px;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar a {
+        color: #333;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+    }
+
+    .navbar .menu-hamburger {
+        display: block;
+        background-color: #ffffff;
+        border-radius: 20px;
+        transition: 0.3s;
+    }
+
+    .navbar .menu-hamburger:hover {
+        cursor: pointer;
+        rotate: 90deg;
+    }
+
+    .nav-links {
+        position: fixed; /* Change position to fixed */
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.55); /* More opaque background */
+        backdrop-filter: blur(5px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-100%);
+        transition: transform 0.1s ease-in-out;
+        z-index: 1;
+    }
+
+    .nav-links.mobile-menu {
+        transform: translateX(0); /* Show the menu */
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 30px 0;
+        font-size: 3em;
+    }
+
+    /* Disable scrolling when the menu is open */
+    body.menu-active {
+        overflow: hidden;
+    }
+
+    section#contact .container form {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    section#contact .container form input {
+        width: 100%;
+    }
+
+    section#contact .container .title-contact h6 {
+        font-size: 1em;
+    }
+
+    section#contact .container .title-contact h3 {
+        font-size: 2em;
+    }
+
+    #rs li{
+        margin: 10px;
+        height: 50px;
+        width: 50px;
+    }
+
+    section#accueil .container .photos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 550px;
+    }
+
+    section#accueil .container .photos img {
+        margin: 0 50px;
+    }
+
+    section#accueil {
+        padding: 20px 15px;
+    }   
+
+    section#project{
+      padding: 5px;
+    }
+
+    section#project .container .title-project{
+      margin-bottom: 10px;
+    }
+
+    section#project .container .title-project h1{
+      font-size: 2em
+    }
+}

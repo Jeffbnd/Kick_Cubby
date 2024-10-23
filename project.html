@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KickCubby - Accueil</title>
+    <script src="https://kit.fontawesome.com/30d44c6ae5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="images/Logo_KickCubby_sans_fond.png" alt=""></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="active"><a href="project.html">Le projet</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <img src="images/menu.png" alt="Menu Hamburger" class="menu-hamburger">
+        </nav>
+    </header>
+<main>
+    <section id="project">
+        <div class="container">
+            <section class="title-project">
+                <div id="marque">
+                    <h1 id="kick">Kick</h1><h1 id="Cubby">Cubby</h1>
+                </div>
+                <div class="wrapper">
+                    <div class="container-text">
+                        <h1>Le rangement de sneakers 2.0</h1>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section class="choix">
+                <section class="card"><a href="index.html">
+                    <div class="product-image">
+                        <img src="images/Image/photo1_sans_fond.png" alt="OFF-white Red Edition" draggable="false" />
+                    </div>
+                    <div class="product-info">
+                        <h2>Version classique</h2>
+                        <p>Un style Nature</p>
+                        <div class="price">_</div>
+                    </div>
+                    <div class="btn">
+                        <button class="buy-btn">En savoir plus...</button>
+                        <button class="fav">
+                        <svg class="svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+                        </svg>
+                        </button>
+                    </div></a>
+                </section>
+                <section class="card card-blue">
+                    <div class="product-image">
+                        <img src="images/Image/photo2_sans_fond.png" alt="OFF-white Blue Edition" draggable="false" />
+                    </div>
+                    <div class="product-info">
+                        <h2>Version personnalisée</h2>
+                        <p>Un style personnalisé</p>
+                        <div class="price">_</div>
+                    </div>
+                    <div class="btn">
+                        <button class="buy-btn">En savoir plus...</button>
+                        <button class="fav">
+                        <svg class="svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+                        </svg>
+                        </button>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+</main>
+<footer>
+    <div id="rs">
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.whatsapp.com/" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </li>
+            <li>
+               <a href="https://www.instagram.com/kickcubby?igsh=dDljdnU1Z28xeG84" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="droit">
+        <p>&copy; 2024 KickCubby - Tous droits réservés.</p>
+    </div>
+</footer>
+
+    <!-- PARTIE JAVASCRIPT -->
+
+    <!-- Menu déroulant -->
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+    
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+</html>

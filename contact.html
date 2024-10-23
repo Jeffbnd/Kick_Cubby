@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KickCubby - Contact</title>
+    <script src="https://kit.fontawesome.com/30d44c6ae5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="images/Logo_KickCubby_sans_fond.png" alt="logo KickCubby"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="project.html">Le projet</a></li>
+                    <li class="active"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <img src="images/menu.png" alt="Menu Hamburger" class="menu-hamburger">
+        </nav>
+</header>
+    <main>
+        <section id="contact">
+            <div class="container">
+                <div class="title-contact">
+                    <h6>Une question ?</h6>
+                    <h3>Contactez-nous</h3>
+                </div>
+                <form action="#" method="post">
+                    <input type="text" name="Name" placeholder="Entrez votre Nom et Prénom..." required>
+                    <input type="email" name="email" placeholder="Entrez votre Email..." required>
+                    <input type="text" name="Subject" placeholder="Entrez le sujet..." required>
+                    <input type="text" name="number" placeholder="Entrez votre numéro de téléphone...">
+                    <textarea name="message" placeholder="Entrez votre message"></textarea required>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div id="rs">
+            <ul>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </li>
+                <li>
+                   <a href="https://www.instagram.com/kickcubby?igsh=dDljdnU1Z28xeG84" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="droit">
+            <p>&copy; 2024 KickCubby - Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- PARTIE JAVASCRIPT -->
+
+    <!-- Menu déroulant -->
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+    
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</body>
+</html>

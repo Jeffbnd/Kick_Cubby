@@ -408,7 +408,6 @@ section#project .container .title-project h1#Cubby{
   min-height: 100%;
   display: grid;
   place-items: center;
-  min-height: calc(100vh - 16px);
 }
 
 .wrapper h1 {
@@ -790,12 +789,15 @@ section#contact .container form button:hover {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        max-width: 550px;
     }
 
     section#accueil .container .photos img {
-        margin: 0 50px;
+        margin: 10px 0px;
     }
+
+    section#accueil .container .photos img:hover {
+      height: 350px;
+  }
 
     section#accueil {
         padding: 20px 15px;
@@ -809,7 +811,7 @@ section#contact .container form button:hover {
       margin-bottom: 10px;
     }
 
-    section#project .container .title-project h1{
-      font-size: 2em
+    section#project .container .title-project #marque h1{
+  font-size: 15vw;
     }
 }

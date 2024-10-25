@@ -4,20 +4,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap");
 
 
+
 /*===== GENERAL STYLE =====*/
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
 }
 
 body{
     min-height: 100vh;
-    background: rgb(105,100,100);
     background: linear-gradient(0deg, rgba(105,100,100,1) 19%, rgba(0,0,0,1) 100%);
 }
 
@@ -72,60 +72,117 @@ header {
 
 /*===== FOOTER =====*/
 
+
+
 footer {
-    color: white;
-    text-align: center;
-    width: 100%;
+  position: relative;
+  width: 100%;
+  background: rgb(255,87,87);
+  background: linear-gradient(0deg, rgba(255,87,87,1) 0%, rgba(53,134,255,1) 59%);  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
-#rs ul li{
-  color: #ff5757; /* Changez la couleur pour qu'elle soit la même que les liens non visités */
-  text-decoration: none; /* Retire le soulignement si nécessaire */
+footer .social_icon, footer .menu {
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  margin: 10px 0;
+  z-index: 1000;
 }
 
-#rs ul li:visited {
-    color: #ff5757; /* Changez la couleur pour qu'elle soit la même que les liens non visités */
-    text-decoration: none; /* Retire le soulignement si nécessaire */
+footer .social_icon li, footer .menu li {
+  list-style: none;
+}
+footer .social_icon li a {
+  font-size: 2em;
+  color: #ccc;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+footer .social_icon li a:hover {
+  transform: translateY(-15px);
+  color: #ff5757;
 }
 
-#rs ul{
-    display: flex;
-    justify-content: center;
+footer .menu li a {
+  font-size: 1.2em;
+  color: #ccc;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+}
+footer .menu li a:hover {
+  opacity: 1;
+  color: #ff5757;
+}
+footer p {
+  color : #eee;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1em;
 }
 
-#rs li{
-    height: 80px;
-    margin: 20px;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: #dde1e7;
-    box-shadow:  5px 5px 8px #acb0b4,
-             -5px -5px 8px #ffffff;
-    cursor: pointer;
+/*wave and animation*/
+footer .wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url(https://i.ibb.co/rZt4Nhg/wave.png);
+  background-size: 1000px 100px;
 }
 
-#rs li:hover{
-    border-radius: 50%;
-    background: #dde1e7;
-    box-shadow: inset 5px 5px 8px #acb0b4,
-            inset -5px -5px 8px #ffffff;
+footer .wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWave 4s linear infinite;
 }
 
-#rs i{
-    font-size: 2.2em;
+footer .wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animateWave_02 4s linear infinite;
+}
+footer .wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 0;
+  animation: animateWave 3s linear infinite;
 }
 
-#droit{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+footer .wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animateWave_02 3s linear infinite;
 }
 
-#droit p{
-    color: white;
+@keyframes animateWave {
+  0%{
+    background-position-x: 1000px; 
+  }
+  100%{
+    background-position-x: 0px; 
+  }
+}
+
+@keyframes animateWave_02 {
+  0%{
+    background-position-x: 0px; 
+  }
+  100%{
+    background-position-x: 1000px; 
+  }
 }
 
 /*===== HOME PAGE =====*/
@@ -133,20 +190,22 @@ footer {
 /*=== HOME CONTENT ===*/
 
 section#accueil {
-    padding: 0px 15px;
+  padding: 0px 15px;
+  display: flex;
+  justify-content: center;
 }
 
 section#accueil .container {
-    margin: 0 auto;
-    max-width: 1100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /*background-color: white; Voir la taille du conteneur*/
-    padding: 50px 0;
-    border-radius: 15px;
-    box-shadow: 0px 10px 50px -10px rgb(214, 214, 214);
+  max-width: 1100px;
+  width: 100%; /* S'assure que le conteneur prend toute la largeur possible */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 10px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 50px -10px rgb(214, 214, 214);
 }
 
 
@@ -721,6 +780,15 @@ main.buy {
   border-radius: 15px;
   box-shadow: 0px 10px 50px -10px rgb(214, 214, 214);
   margin-bottom: 25px;
+}
+
+main.buy .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 10px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 50px -10px rgb(214, 214, 214);
 }
 
 @media screen and (max-width: 800px) {

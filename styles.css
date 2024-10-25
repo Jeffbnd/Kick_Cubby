@@ -78,6 +78,11 @@ footer {
     width: 100%;
 }
 
+#rs ul li{
+  color: #ff5757; /* Changez la couleur pour qu'elle soit la même que les liens non visités */
+  text-decoration: none; /* Retire le soulignement si nécessaire */
+}
+
 #rs ul li:visited {
     color: #ff5757; /* Changez la couleur pour qu'elle soit la même que les liens non visités */
     text-decoration: none; /* Retire le soulignement si nécessaire */

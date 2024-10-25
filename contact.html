@@ -16,6 +16,7 @@
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="project.html">Le projet</a></li>
                     <li class="active"><a href="contact.html">Contact</a></li>
+                    <li><a href="buy.html">Acheter</a></li>
                 </ul>
             </div>
             <img src="images/menu.png" alt="Menu Hamburger" class="menu-hamburger">
@@ -28,12 +29,12 @@
                     <h6>Une question ?</h6>
                     <h3>Contactez-nous</h3>
                 </div>
-                <form action="#" method="post">
-                    <input type="text" name="Name" placeholder="Entrez votre Nom et Prénom..." required>
-                    <input type="email" name="email" placeholder="Entrez votre Email..." required>
-                    <input type="text" name="Subject" placeholder="Entrez le sujet..." required>
-                    <input type="text" name="number" placeholder="Entrez votre numéro de téléphone...">
-                    <textarea name="message" placeholder="Entrez votre message"></textarea required>
+                    <form action="https://formspree.io/f/myzyzvjp" method="POST" data-formspree-redirect="index.html">                     
+                        <input type="text" name="Nom et Prénom:" placeholder="Entrez votre Nom et Prénom..." required>
+                        <input type="email" name="E-mail :" placeholder="Entrez votre Email..." required>
+                        <input type="text" name="Le Sujet :" placeholder="Entrez le sujet..." required>
+                        <input type="text" name="Numéro de téléphone :" placeholder="Entrez votre numéro de téléphone...">
+                        <textarea name="Le message :" placeholder="Entrez votre message"></textarea required>
                     <button type="submit">Envoyer</button>
                 </form>
             </div>
@@ -81,5 +82,9 @@
         navLinks.classList.toggle('mobile-menu')
         })
     </script>
+
+    <!-- Redirection envoyer page index -->
+
+
 </body>
 </html>
